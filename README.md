@@ -13,7 +13,7 @@ This is an endorsed fork and collaboration of [Peter Jansen's work](https://hack
 
 ### Version 3.0
 
-The major advancement of v3.0 is a dramatic increase in the speed with which the tile data can be read out.  I have achieved ~2000 frames per second (fps), which allows visualizing even quickly varying fields (e.g. those in a 60Hz transformer, or a moving motor), but it's likely that the tile can achieve even higher framerates.  Version 3.0 reduces the size of the tile to an 8x8 grid of hall effect sensors (64 total), arrayed in a 4mm grid.  The boards should also still be tile-able, with up to 4 of the boards tileable with minimal borders to create a 16x16 array. 
+The major advancement of v3.0 is a dramatic increase in the speed with which the tile data can be read out. ~2000 frames per second (fps) can be achieved which allows visualizing even quickly varying fields (e.g. those in a 60Hz transformer, or a moving motor). Version 3.0 reduces the size of the tile to an 8x8 grid of hall effect sensors (64 total), arrayed in a 4mm grid.  The boards is tile-able with up to 4 of the boards tileable with minimal borders to create a 16x16 array. 
 
 For more information (and a video of the v3.0 tile in use), please see: 
 https://hackaday.io/project/18518-iteration-8/log/91551-a-third-high-speed-magnetic-imager-tile-draft
