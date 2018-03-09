@@ -1,9 +1,15 @@
 Magnetic Imaging Tile
 ======
 
-Work-in-progress.  Please use at your own risk.
+![SparkFun Magnetic Imaging Tile](https://cdn.sparkfun.com//assets/parts/1/2/8/3/9/Magnetic-Imager-Fan.gif)
 
-This is a board intended to function as a "magnetic field camera", and visualize magnetic fields. 
+[*SparkFun Magnetic Imaging Tile (SPX-14652)*](https://www.sparkfun.com/products/14652)
+
+The Magnetic Imaging Tile uses an array of 64 hall effect sensors to convert magnetic fields to the visual spectrum. That's right! You can now see magnetic fields in real time! As is to be expected, there are caveats: the magnetic sensors used on the tile are some of the most sensitive on the market but you need to be within 1 to 2 centimeters of the tile to get a good image.
+
+This is a board intended to function as a "magnetic field camera" to visualize magnetic fields. 
+
+This is an endorsed fork and collaboration of [Peter Jansen's work](https://hackaday.io/project/18518-iteration-8/log/91551-a-third-high-speed-magnetic-imager-tile). All credit goes to him! SparkX has re-designed the PCB for DFM and simiplified some of the platform interfacing code.
 
 ### Version 3.0
 
@@ -12,22 +18,25 @@ The major advancement of v3.0 is a dramatic increase in the speed with which the
 For more information (and a video of the v3.0 tile in use), please see: 
 https://hackaday.io/project/18518-iteration-8/log/91551-a-third-high-speed-magnetic-imager-tile-draft
 
-### Version 2.0
+Repository Contents
+-------------------
 
-Version 2.0 consists of an array of 12x12 hall effect sensors (144 total) that sense magnetic fields, arrayed in a 4mm grid.  Each sensor is connected to an array of analog switches, that allow an individual sensor to be addressed.  Read out is accomplished one magnetic "pixel" at a time, selecting a given hall sensor from the array, reading it's value (either using the internal ADC, or an external ADC), and repeating this process until the entire array has been read out.  
+* **/Documents** - Datasheets for the RV-1805-C3 and super capacitor
+* **/Hardware** - Eagle design files (.brd, .sch)
 
-The current array is designed to be tile-able, with up to four of the boards (24x24 magnetic field sensors) arrayed together. 
+License Information
+-------------------
 
-The Arduino firmware has a framerate of approximately 10 frames per second, when the image data is streamed over the serial port and displayed using the Processing visualization.  The Raspberry Pi Python example achieves approximately 30fps.  The array itself is likely capable of much higher speeds, but one of the major limiting factors is currently the speed of the I2C I/O multiplexer (used to select which magnetometer to read from). 
+This product is _**open source**_! 
 
-For more information (and a video of the v2.0 tile in use), please see: 
-https://hackaday.io/project/18518-iteration-8/log/64376-a-magnetic-imager-tile
+Please review the LICENSE.md file for license information. 
 
-# Open Source
+If you have any questions or concerns on licensing, please contact techsupport@sparkfun.com.
 
-This project is open source software and hardware, and is released under various open licenses.
+Please use, reuse, and modify these files as you see fit. Please maintain attribution to SparkFun Electronics and release any derivative under the same license.
 
-# Disclaimer
+Disclaimer
+-------------------
 
 **DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY.**
 
